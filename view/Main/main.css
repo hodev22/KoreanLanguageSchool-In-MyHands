@@ -1,0 +1,203 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    height: 100%;
+    overflow: hidden;
+    background-image: url('/assets/img/GradientBackground.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 0;
+    border-bottom: 1px solid #486284;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0d2d57;
+    margin-left: 6%;
+    margin-right: 5px; /* 오른쪽 마진 추가하여 간격 조정 */
+}
+
+.translate-buttons {
+    margin-right: 20px; /* 오른쪽 여백 조정 */
+    display: flex; /* 버튼을 가로로 정렬 */
+    align-items: center; /* 버튼 세로 중앙 정렬 */
+}
+
+.translate-btn {
+    margin: 0 5px;
+    font-family: 'Pretendard light';
+    font-size: 1rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    margin-right: 5%;
+}
+  
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+  
+.nav-link {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #486284;
+    text-align: center;
+    opacity: 0.9;
+    cursor: pointer;
+}
+  
+.divider {
+    width: 1px;
+    height: 24px;
+    background-color: #486284;
+    opacity: 1;
+    margin: 0 1rem;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px;
+    height: 50%;
+}
+
+.content {
+    height: 50%;
+    max-width: 50%;
+}
+
+.content h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.content button {
+    padding: 10px 20px;
+    background-color: #486284;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Pretendard light';
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.image-placeholder img {
+    width: 500px;
+    margin-right: 2%;
+}
+
+.info {
+    display: flex; /* 가로 배치 */
+    justify-content: center; /* 양쪽 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+    background-color: rgba(255, 255, 255, 0.9); /* 배경색 */
+    padding: 20px; /* 패딩 추가 */
+    margin: 20px 6%; /* 여백 조정 */
+    border-radius: 10px; /* 모서리 둥글게 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 그림자 추가 */
+
+}
+
+.info-content, .divider-info {
+    display: flex;
+    flex-direction: row; /* 가로 정렬 */
+    justify-content: space-between; /* 고르게 배치 */
+    width: 80%; /* 너비를 100%로 설정 */
+    color: #000000; /* 텍스트 색상 */
+}
+
+.divider-info {
+    width: 1px;
+    height: 24px;
+    background-color: #000000;
+    opacity: 0.7;
+    margin: 16px 1rem;
+}
+
+body {
+    top: 0 !important; /* 페이지 상단 조정 */
+}
+
+.skiptranslate > iframe.skiptranslate {
+    display: none !important; /* 번역 바 숨기기 */
+}
+
+@media (max-width: 1920px) {
+    .main {
+        height: 60%;
+    }
+
+    .info {
+        margin: 20px 6%;
+    }
+}
+
+@media (max-width: 1680px) {
+    .main {
+        height: 60%;
+    }
+}
+
+@media (max-width: 1440px) {
+    .main {
+        height: 60%;
+    }
+}
+
+@media (max-width: 1280px) {
+    .main {
+        height: 50%;
+    }
+}
+
+@media (max-width: 960px) {
+    .main {
+        height: 50%;
+    }
+}
+
+@media (max-height: 960px) {
+    .main {
+        height: 60%;
+    }
+}
+
+@media (max-height: 768px) {
+    .main {
+        height: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .main {
+        height: 50%;
+    }
+}
+

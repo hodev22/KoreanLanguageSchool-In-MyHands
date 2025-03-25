@@ -1,0 +1,222 @@
+html, body {
+    display: flex;
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    padding: 1rem 0;
+    border-bottom: 1px solid #486284;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+  
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0d2d57;
+    margin-left: 6%;
+    margin-right: 5px; /* 오른쪽 마진 추가하여 간격 조정 */
+}
+  
+.translate-buttons {
+    margin-right: 20px; /* 오른쪽 여백 조정 */
+    display: flex; /* 버튼을 가로로 정렬 */
+    align-items: center; /* 버튼 세로 중앙 정렬 */
+}
+  
+.translate-btn {
+    margin: 0 5px;
+    font-family: 'Pretendard light';
+    font-size: 1rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+  
+.navigation {
+    display: flex;
+    align-items: center;
+    margin-right: 5%;
+}
+    
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+    
+.nav-link {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #486284;
+    text-align: center;
+    opacity: 0.9;
+    cursor: pointer;
+}
+  
+.divider {
+    width: 1px;
+    height: 24px;
+    background-color: #486284;
+    opacity: 1;
+    margin: 0 1rem;
+}
+
+.main {
+    margin-top: 5%; /* 헤더 높이에 맞춰 여백 추가 */
+    display: flex; /* Flexbox 사용 */
+    flex-direction: column; /* 세로 방향으로 정렬 */
+    align-items: center; /* 수평 중앙 정렬 */
+    height: calc(100% - 60px); /* 헤더 높이를 제외한 나머지 영역을 100%로 설정 */
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-top: 20px; /* 화면 가장자리와의 간격을 늘림 */
+    padding-left: 40px; /* 화면 가장자리와의 간격을 늘림 */
+    padding-right: 40px; /* 화면 가장자리와의 간격을 늘림 */
+    padding-bottom: 80px; /* 화면 가장자리와의 간격을 늘림 */
+    box-sizing: border-box; /* 패딩을 포함한 크기 계산 */
+
+}
+
+.header-images {
+    position: relative; /* 상대 위치로 변경 */
+    top: 0; /* 상단 여백 조정 */
+    left: 0; /* 왼쪽 여백 조정 */
+    display: flex; /* 이미지들을 가로로 정렬 */
+    justify-content: space-between; /* 양쪽 끝으로 배치 */
+    width: 80%; /* 너비를 100%로 설정 */
+    padding: 0; /* 패딩 추가 */
+    margin-left: 77%;
+    margin-bottom: 20px; /* 문제집 목록과의 간격 추가 */
+}
+  
+.header-images img {
+    width: 25%; /* 이미지 너비 설정 */
+    height: auto; /* 비율 유지 */
+}
+
+.problem-list {
+    display: flex;
+    flex-wrap: wrap; /* 줄 바꿈 허용 */
+    justify-content: flex-start; /* 왼쪽 정렬로 변경 */
+    gap: 10px; /* 간격 조정 */
+    width: 100%; /* 너비를 100%로 설정 */
+    padding: 10px; /* 패딩 제거 */
+    box-sizing: border-box; /* 패딩을 포함한 크기 계산 */
+
+}
+
+.problem-set {
+    flex: 0 0 calc(24% - 5px); /* 4개의 박스, 간격 고려 */
+    max-width: calc(24% - 5px); /* 최대 너비 조정 */
+    margin: 15px 5px; /* 아래쪽 마진만 유지하고 좌우 간격 줄임 */
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: left;
+    background-color: #D3DCE7;
+    transition: transform 0.1s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.problem-set:hover {
+    transform: scale(1.03); /* 호버 시 확대 효과 */
+}
+
+.id-and-favorite {
+    display: flex; /* 플렉스 박스 사용 */
+    justify-content: space-between; /* 날짜와 즐겨찾기 아이콘 간격 조정 */
+    align-items: center; /* 수직 정렬 */
+    margin-bottom: 10px; /* 아래쪽 여백 추가 */
+}
+
+.viewProblems, .viewAnswers {
+    background-color: #ffffff;
+    font-family: 'Pretendard';
+    font-weight: 600;
+    border: none;
+    border-width: 0.5px;
+    border-radius: 3px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.delete-icon {
+    width: 18px; /* 아이콘 너비 설정 */
+    height: auto; /* 비율 유지 */
+    cursor: pointer; /* 커서 포인터로 변경 */
+    margin-left: 40px; /* 문제집 이름과의 간격 추가 */
+}
+
+.problem-set h3 {
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    margin: 0;
+}
+
+.problem-set h2 {
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    align-items: center; /* 수직 정렬 */
+    margin: 0; /* 기본 마진 제거 */
+    white-space: nowrap; /* 줄바꿈 방지 */
+    overflow: hidden; /* 넘치는 텍스트 숨기기 */
+    text-overflow: ellipsis; /* 넘치는 텍스트에 ... 표시 */
+}
+
+.workbook-button {
+    display: flex; /* 버튼을 가로로 배치 */
+    justify-content: flex-end;
+    margin-top: 20px; /* 버튼과 제목 사이의 간격 추가 */
+}
+
+.workbook-button button {
+    flex: 1; /* 버튼이 동일한 너비를 가지도록 설정 */
+    margin-right: 10px; /* 버튼 간격 추가 */
+    padding: 10px; /* 버튼 패딩 추가 */
+    background-color: #ffffff; /* 버튼 배경색 */
+    border: 1px solid #ccc; /* 버튼 테두리 */
+    border-radius: 4px; /* 버튼 모서리 둥글게 */
+    cursor: pointer; /* 커서 포인터로 변경 */
+    transition: background-color 0.2s; /* 호버 효과 추가 */
+}
+
+.questions, .answers {
+    page-break-inside: avoid; /* 텍스트가 잘리지 않도록 설정 */
+    overflow: hidden; /* 잘리는 영역 방지 */
+}
+
+/* 작은 화면에서는 3개 또는 2개로 조정 */
+@media (max-width: 1200px) {
+    .problem-set {
+        flex: 0 0 calc(33.33% - 13.33px);
+        max-width: calc(33.33% - 13.33px);
+    }
+}
+
+@media (max-width: 900px) {
+    .problem-set {
+        flex: 0 0 calc(50% - 10px);
+        max-width: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 600px) {
+    .problem-set {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}

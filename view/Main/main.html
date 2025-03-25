@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.2.js" charset="utf-8"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title data-i18n="메인 페이지">메인 페이지</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">NOSTACK</div>
+        <nav class="navigation">
+            <div class="nav-links">
+                <div class="nav-link" onclick="location.href='../Main/main.html'" data-i18n="Home">Home</div>
+                <div class="nav-link" onclick="location.href='../Category/category.html'" data-i18n="문제집 생성">문제집 생성</div>
+                <div class="nav-link" onclick="location.href='../History/history.html'" data-i18n="보관함">보관함</div>
+            </div>
+            <div class="divider"></div>
+            <div class="translate-buttons">
+                <button class="translate-btn" data-lang="ko">한국어</button>
+                <button class="translate-btn" data-lang="en">English</button>
+                <button class="translate-btn" data-lang="lo">ພາສາລາວ</button>
+            </div>
+        </nav>
+    </div>
+    
+    <main class="main">
+        <div class="content">
+            <h1 id="main-title" data-i18n="생성형 AI를 활용한 문제집 생성기 NOSTACK">생성형 AI를 활용한 문제집 생성기<br>NOSTACK</h1>
+            <p id="main-description" data-i18n="대학생을 위한 단 하나뿐인 교보재">대학생을 위한 단 하나뿐인 교보재</p>
+            <button onclick="location.href='../Category/category.html'" data-i18n="문제집 생성 바로가기">문제집 생성 바로가기</button>
+        </div>
+        <div class="image-placeholder">
+            <img src="/assets/img/logo_icon.png" alt="Placeholder Image">
+        </div>
+    </main>
+
+    <div class="info">
+        <div class="info-content">
+            <p data-i18n="서비스 관련 문의사항은 본 문의처로 연락 주세요.">서비스 관련 문의사항은 본 문의처로 연락 주세요.</p>
+            <div class="divider-info"></div>
+            <p>010-1234-5678</p>
+            <div class="divider-info"></div>
+            <p>nostack@service.com</p>
+        </div>
+    </div>
+
+    <script src="/config/apikey.js"></script> 
+    <script type="module" src="/services/localization.js"></script>
+</body>
+</html>
